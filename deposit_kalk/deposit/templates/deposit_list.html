@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>all deposits</title>
+</head>
+<body>
+
+
+    <ul>
+        {% for deposit in object_list %}
+            <li>
+                <a href="{% url 'deposit-detail' pk=deposit.id %}">
+                    Name: {{ deposit.deposit }}</strong> <br>
+                    Date: {{ deposit.term }} <br>
+                    Reason: {{ deposit.rate }} <br>
+                    Room ID: {{ deposit.interest }} <br>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
